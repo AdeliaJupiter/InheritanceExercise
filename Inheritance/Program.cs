@@ -39,15 +39,15 @@ namespace Inheritance
             birdOne.FeatherColor = "blue";
             birdOne.BeakType = "narrow";
             birdOne.IsFlightless = false;
-            var articleName = vowelStart(birdOne.Name);
-            var articleDiet = vowelStart(birdOne.Diet);
+            var articleName = VowelStart(birdOne.Name);
+            var articleDiet = VowelStart(birdOne.Diet);
 
             Console.WriteLine($"The {birdOne.Name} is an interesting bird. While it may be surprising given their {birdOne.BeakType} beak,\n" +
                 $"{articleName} {birdOne.Name} is actually {articleDiet} {birdOne.Diet}!\n" +
                 $"Did you know that wings count as limbs? This means that birds have {birdOne.NumLimbs} just like humans!\n" +
                 $"With a wingspan of only about {birdOne.Wingspan} inches, {articleName} {birdOne.Name} is quite small!\n" +
-                $"And since it {isIsNot(birdOne.IsFlightless)} flightless, it uses quite a lot of energy.\n" +
-                $"And while it does sleep a lot, it {isIsNot(birdOne.IsNocturnal)} nocturnal.\n" +
+                $"And since it {IsIsNot(birdOne.IsFlightless)} flightless, it uses quite a lot of energy.\n" +
+                $"And while it does sleep a lot, it {IsIsNot(birdOne.IsNocturnal)} nocturnal.\n" +
                 $"Though it can be many different colors, one of the most common feather colors is {birdOne.FeatherColor}.\n\n");
 
             /*Create an object of your Reptile class
@@ -65,19 +65,19 @@ namespace Inheritance
             reptileOne.IsPoisonous = false;
             reptileOne.ScalePattern = "diamond";
             reptileOne.IsAquatic = true;
-            articleName = vowelStart(reptileOne.Name);
-            articleDiet = vowelStart(reptileOne.Diet);
+            articleName = VowelStart(reptileOne.Name);
+            articleDiet = VowelStart(reptileOne.Diet);
 
             Console.WriteLine($"One of the most interest and most feared animals in the animal kingdom is the {reptileOne.Name}\n" +
                 $"An effective predator, despite its {reptileOne.NumLimbs} limbs, a {reptileOne.Name} is {articleDiet} {reptileOne.Diet}.\n" +
-                $"Look out for the {reptileOne.ScalePattern} pattern! This could mean it {isIsNot(reptileOne.IsVenomous)} venomous!\n" +
-                $"Depending on its diet, {articleName} {reptileOne.Name} may also be poisonous, but it generally {isIsNot(reptileOne.IsPoisonous)}.\n" +
-                $"Without a common sleeping schedule, {articleName} {reptileOne.Name} {isIsNot(reptileOne.IsNocturnal)} considered nocturnal.\n" +
-                $"And while most people don't imagine {reptileOne.Name}s in the water, it {isIsNot(reptileOne.IsAquatic)} possible.");
+                $"Look out for the {reptileOne.ScalePattern} pattern! This could mean it {IsIsNot(reptileOne.IsVenomous)} venomous!\n" +
+                $"Depending on its diet, {articleName} {reptileOne.Name} may also be poisonous, but it generally {IsIsNot(reptileOne.IsPoisonous)}.\n" +
+                $"Without a common sleeping schedule, {articleName} {reptileOne.Name} {IsIsNot(reptileOne.IsNocturnal)} considered nocturnal.\n" +
+                $"And while most people don't imagine {reptileOne.Name}s in the water, it {IsIsNot(reptileOne.IsAquatic)} possible.");
 
         }
 
-        static string isIsNot (bool whatIs)
+        static string IsIsNot (bool whatIs)
         {
             if (whatIs)
             {
@@ -88,7 +88,7 @@ namespace Inheritance
                 return "is not";
             }
         }
-        static string vowelStart(string word)
+        static string VowelStart(string word)
         {
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
             for(int i = 0; i < vowels.Length; i++)
